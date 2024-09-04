@@ -1,0 +1,649 @@
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+* { margin: 0; padding: 0; box-sizing: border-box;}
+li { list-style: none;}
+a {
+    text-decoration: none;
+    color: #111;
+    display: block;
+    font-family: "LINESeedKR-Bd";
+    text-wrap: nowrap;
+}
+img { 
+    object-fit: contain;
+    /* object-fit: cover; */
+    width: 100%;
+    height: 100%;
+}
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body {
+    font-family: "LINESeedKR-Bd";
+}
+.wrap {
+    width: 100%;
+}
+.center {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0 20px;
+    z-index: 100;
+    background-color: white;
+    transition: top 0.5s;
+    position: fixed;
+    top: 0;
+}
+
+header .logo {
+    width: 240px;
+    margin: 0 auto;
+}
+header .navi-area {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .navi-area .menu-icon {
+    display: flex;
+    align-items: center;
+}
+header .navi-area .menu-btn {
+    width: 28px;
+    margin-right: 20px;
+}
+header .navi-area .logo2 {
+    width: 150px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+header .navi-area nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .navi-area nav ul {
+    display: flex;
+}
+header .navi-area nav ul li {
+    margin: 0 20px;
+}
+header .navi-area nav ul li a {
+    font-size: 18px;
+    font-weight: bold;
+}
+header .navi-area nav ul li a:hover {
+    color: a0bee6;
+}
+header .navi-area .member ul {
+    display: flex;
+    align-items: center;
+}
+header .navi-area .member ul li {
+    margin-left: 14px;
+}
+header .navi-area .member ul li:last-child {
+    width: 30px;
+    height: 30px;
+    position: realtive;
+}
+header .navi-area .member ul li:last-child span {
+    position: absolute;
+    display: block;
+}
+header .navi-area .member ul li:last-child .search-icon {
+    display: block; /* 보임 */
+}
+header .navi-area .member ul li:last-child .close-icon {
+    display: none; /* 안보임 */
+    margin: 5px;
+    width: 18px;
+}
+/* 화면이 스크롤되면 header의 높이가 작아지고 로고도 작아지고 heeader 위치는 고정됨 - header에 fixde 클래스를 추가함 */
+header.sticky {
+    top: -90px;
+}
+header.sticky .navi-area .logo2 {
+    opacity: 1;
+}
+.sitemap {
+    /* 안보임 */
+    display: none;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 210;
+}
+.sitemap .sitemap-in {
+    width: 480px;
+    height: 100%;
+    position: relative;
+    background-color: white;
+    padding: 24px;
+    padding-right: 10px;
+}
+.sitemap .sitemap-in .close-btn {
+    width: 28px;
+}
+.sitemap .sitemap-in .sitebox {
+    width: 80%;
+    height: calc(100% - 30px);
+    margin-top: 30px;
+    float: right;
+    overflow: auto;
+    padding-right: 20%;
+}
+.sitemap .sitemap-in .sitebox .memberbox ul {
+    display: flex;
+    margin: 30px 0;
+}
+.sitemap .sitemap-in .sitebox .memberbox ul li {
+    margin-right: 20px;
+}
+.sitemap .sitemap-in .sitebox .memberbox ul a {
+    font-size: 15px;
+}
+.sitemap .sitemap-in .sitebox .menu1 {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.sitemap .sitemap-in .sitebox .menu1 ul li a {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.sitemap .sitemap-in .sitabox .menu2 ul li a {
+    font-size: 16px;
+    padding: 10px 0;
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a  i {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: block;     /* 인라인 요소를 블록 요소로 변환 */
+    text-align: center;
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a  i span {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: #aaa;
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a  i span.barX {
+    transform: rotateZ(90deg);
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a  i span.barY {
+    display: none;
+}
+.sitemap .sitemap-in .sitebox .sns ul {
+    display: flex;
+    margin: 20% 0;
+}
+.sitemap .sitemap-in .sitebox .sns ul li {
+    width: 28px;
+    margin-right: 20px;
+}
+/* .sitemap영역의 .sitebox 스크롤바 수정하기 */
+.sitemap .sitemap-in .sitebox::-webkit-scrollbar {
+    position: relative;
+    left: -5px;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+}
+.sitemap .sitemap-in .sitebox::-webkit-scrollbar-thumb {
+    background-color: #295f98;
+}
+.sitemap .sitemap-in .sitebox::-webkit-scrollbar-track {
+    background-color: #dbdbdb;
+}
+.sitemap .sitemap-bg {
+    position: absolute;
+    right:0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: calc(100% - 480px);;
+    height: 100%;
+}
+/* 검색 영역 */
+.search-area {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 150px;
+    z-index: 200;
+    width: 100%;
+    height: calc(100% - 130px);
+}
+.search-area.sticky {
+    top: 60px;
+    height: calc(100% - 60px);
+}
+.search-area .search-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.search-area .search-in {
+    position: absolute;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.search-area .search-in .input-area {
+    width: 790px;
+    height: 60px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-area .search-in .input-area input {
+    border:none;
+    padding: 10px;
+    width: 96%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+/* input[type=search] 입력란의 X버튼 커스텀 */
+.search-area .search-in .input-area input[type=search]::-webkit-search-cancel-button {
+    /* 원본 숨김 */
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: url(../img/close.svg) center center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+/* 입력란을 클릭했을 때 테두리 없음 */
+.search-area .search-in .input-area input:focus {
+    outline: none;
+}
+.search-area .search-in .input-area button {
+    cursor: pointer;
+    width: 26px;
+    border: none;
+    margin-left: 10px;
+    background-color: transparent;
+}
+.s1 .main {
+    margin-top: 170px;
+}
+/* 메인 슬라이드(swiper) */
+.s1 .main .swiper {
+    width: 100%;
+}
+.s1 .main .swiper .swiper-slide {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.s1 .main .swiper .swiper-slide a > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.s1 .main .swiper .swiper-slide .img-box {
+    transform: scale(1, 1);
+    transition: all 5s;
+}
+.s1 .main .swiper .swiper-slide div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.s1 .main .swiper .swiper-slide-active .img-box {
+    transform: scale(1.05, 1.05);
+}
+.s1 .main .swiper .swiper-slide .img-box p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    background: (to bottom, transparent, rgba(0, 0, 0, 0.15));
+}
+.s1 .main .swiper .swiper-button-prev:after {
+    content:"";
+    width: 30px;
+    height: 60px;
+    background: url(../img/ico_arrow02.svg) center center no-repeat;
+    background-size: cover;
+    transform:  rotateY(-180deg);
+}
+.s1 .main .swiper .swiper-button-next:after {
+    content:"";
+    width: 30px;
+    height: 60px;
+    background: url(../img/ico_arrow02.svg) center center no-repeat;
+    background-size: cover;
+}
+.s1 .main .swiper .swiper-pagination {
+    bottom: 20px;
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
+    position: relative;
+    width: 40px;
+    height: 3px;
+    border-radius:1px;
+    background-color: white;
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet i {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet b {
+    position: absolute;
+    left: 0; top: 0;
+    width: 0; height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: transparent;
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet-active b {
+    width:100%;
+    animation-name: countingBar;
+    animation-duration: 3s;
+    /* 가속 */
+    animation-timing-function: ease-in;
+    /* 한번씩만 */
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+@keyframes countingBar {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+}
+/* 쿨젠 소개 */
+.s2 {
+    margin-top: 100px;
+}
+/* 모든 제목 */
+.title {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+h1 { 
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: -1px;
+}
+.title a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.title a i {
+    height: 20px;
+    margin-left: 5px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+/* 직속 자식 선택자(>) */
+.container > div {
+    width: 580px;
+}
+.container .left-con {
+    height: 880px;
+}
+.container .left-con .s1 .main {
+    width: 100%;
+    height: 780px;
+}
+.container .right-con {
+    height: 1720px;
+    display: flex;
+    flex-flow: column wrap;  /* 열 기준 줄바꿈 허용 */
+    align-content: space-between;
+}
+.container .right-con .photo-box {
+    margin-bottom: 70px;
+}
+.container .right-con .photo {
+    width: 282px;
+    margin-bottom: 10px;
+}
+.container .right-con .short {
+    height: 300px;
+}
+.container .right-con .long {
+    height: 400px;
+}
+/* 모든 사진은 마우스 오버했을 때 사진이 커지고, 마우스 아웃하면 사진 원래크기로 돌아옴 */
+.container .photo {
+    overflow: hidden;
+}
+.container .photo img {
+    scale: 1;
+    transition: scale 0.5s;
+}
+.container .photo:hover img {
+    scale: 1.1;
+}
+.s3 {
+    background-color: #f5f6f8;
+    margin-top: 100px;
+    padding: 80px 0;
+}
+.container .swiper {
+    width: 100%;
+    overflow: visible;
+}
+.container .swiper .swiper-slide {
+    width: 384px;
+    height: 500px;
+}
+
+.container .swiper .swiper-slide .photo {
+    height: 400px;
+    padding: 30px;
+}
+.container .swiper .swiper-scrollbar {
+    bottom: -20px;
+}
+.s4 {
+    margin-top: 190px;
+}
+.s4 p {
+    text-align: center;
+}
+.s5 {
+    margin-top: 190px;
+}
+.s5 .container .right-con {
+    flex-flow: column nowrap;
+    height: 1820px;
+}
+.s5 .container .photo-box .middle {
+    width: 100%;
+    height: 368px;
+}
+.s6 {
+    margin-top: 190px;
+}
+.s6 .photo {
+    width: 260px;
+    height: 200px;
+}
+.s6 .photo-box {
+    width: 282px;
+}
+.s6 .photo-box p {
+    margin-top: 10px;
+}
+.s7 {
+    margin-top: 140px;
+}
+.s7 .container {
+    width: 100%;
+    height: 140px;
+    background-color: #efefef;
+    display: flex;
+    float: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.s7 .container .logo-icon {
+    width: 160px;
+}
+.s7 .container a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.s7 .container a i {
+    height: 20px;
+    margin-left: 5px;
+}
+footer {
+    width: 100%;
+    margin-top: 190px;
+}
+footer .footer-top {
+    width: 100%;
+    height: 65px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+footer div .center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+footer .footer-top div ul {
+    display:flex;
+    flex-flow: row nowrap;
+}
+footer .footer-top div ul li a {
+    font-size: 14px;
+}
+footer .footer-top .info ul li {
+    margin-right: 20px;
+}
+footer .footer-top .info ul li:nth-child(5) {
+    font-weight: bold;
+}
+footer .footer-top .sns ul li {
+    margin-left: 20px;
+    width: 26px;
+}
+footer .footer-top .sns ul li:nth-child(3) {
+    width: 30px;
+}
+footer .footer-top .sns ul li:nth-child(4) {
+    width: 30px;
+}
+footer .footer-bottom {
+    height: 200px;
+}
+footer .footer-bottom .footer-logo {
+    width: 150px;
+}
+footer .footer-bottom address {
+    font-size: 15px;
+    color: #666;
+    font-style: normal;
+    line-height: 30px;
+}
+footer .footer-bottom .family {
+    width: 180px;
+    position: relative;
+    z-index: 300px;
+}
+footer .footer-bottom .family > a {
+    font-size: 15px;
+    display: flex;
+    flex-flow:  row nowrap;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #666;
+    padding :8px 18px;
+    align-items: center;
+}
+footer .footer-bottom .family > a span {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-bottom .family .sub {
+    position: absolute;
+    bottom: 38px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 300;
+    display: none;
+}
+footer .footer-bottom .family .sub a {
+    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #999;
+    border-bottom: none;
+    background-color: white;
+}
+footer .footer-bottom .family .sub a:hover {
+    background-color: #efefef;
+}
+.top {
+    width: 50px;
+    height: 50px;
+    background-color: #5e90f2;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 400;
+    border-radius: 100%;
+}
+.top a {
+    color: white;
+    font-size: 14px;
+}

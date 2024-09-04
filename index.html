@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolzen컴퓨터</title>
+    <link rel="shortcut icon" href="img/coolzen.png" type="image/icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- *****순서 중요******* 제이쿼리 다음에 swiper -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 내가 쓰는 js보다 먼저/ j쿼리보다 나중에 순서 중요!!! -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js'></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header-top">
+                <div class="center">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/logo.jpg" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="center">
+                    <div class="navi-area">
+                        <div class="menu-icon">
+                            <div class="menu-btn">
+                                <a href="#">
+                                    <img src="img/icon_menu.svg" alt="menu-icon">
+                                </a>
+                            </div>
+                            <div class="logo2">
+                                <a href="index.html">
+                                    <img src="img/logo.jpg" alt="로고">
+                                </a>
+                            </div>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">용도별PC</a></li>
+                                <li><a href="#">게임별PC</a></li>
+                                <li><a href="#">프리미엄PC</a></li>
+                                <li><a href="#">월간 추천 견적</a></li>
+                                <li><a href="#">온라인견적</a></li>
+                            </ul>
+                        </nav>
+                        <div class="member">
+                            <ul>
+                                <li><a href="#">LOGIN</a></li>
+                                <li><a href="#">SIGNUP</a></li>
+                                <li><a href="#">
+                                        <span class="search-icon"><img src="img/search.svg" alt="search"></span>
+                                        <span class="close-icon"><img src="img/close.svg" alt="close"></span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="s1">
+            <div class="center">
+                <div class="main">
+                    <div class="swiper mainSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/slide1.png" alt="10주년">
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/slide2.png" alt="완제피시">
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/slide3.png" alt="PC부품">
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/slide4.png" alt="배틀그라운드PC">
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/slide5.png" alt="커스텀PC">
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/slide6.png" alt="그래픽카드">
+                                        <p></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div><!-- swiper-wrapper -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s2">
+            <div class="center">
+                <div class="title">
+                    <h1>Best 판매 상품</h1>
+                    <a href="#">더보기<i><img src="img/plus.svg" alt="더하기"></i></a>
+                </div>
+                <div class="container">
+                    <!-- scrollTrigger의 pin영역 -->
+                    <div class="left-con">
+                        <!-- css에서 photo에 hover하면 이미지가 커지는 에니메이션 -->
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/comp26.jpg" alt="메인">
+                            </div>
+                            <p>PC방 고사양 컴퓨터가 내 방에!</p>
+                        </a>
+                    </div>
+                    <div class="right-con">
+                        <!-- short 클래스는 높이 : 300 -->
+                        <!-- long 클래스는 높이 : 400 -->
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/comp2.jpg" alt="PC1">
+                                </div>
+                                <p>쿨링까지 가득 프로게이머 인기상품</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/comp13.jpg" alt="PC2">
+                                </div>
+                                <p>고사양 작업과 게이밍까지 완벽하게</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo long">
+                                    <img src="img/comp4.jpg" alt="PC3">
+                                </div>
+                                <p>PC방 왜 감? 집에서 하면 됨</p>
+                            </a>
+                        </div>
+                        <div class="photobox">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/comp6.jpg" alt="PC4">
+                                </div>
+                                <p>높은 프레임도 거뜬하게</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo long">
+                                    <img src="img/comp7.gif" alt="PC5">
+                                </div>
+                                <p>모든 게임 풀옵션을 위한 하이엔드 사양</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/comp8.jpg" alt="PC6">
+                                </div>
+                                <p>인기 1위 고급 부품 구성</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/comp12.jpg" alt="PC7">
+                                </div>
+                                <p>성능 보장 최고인기 게임 풀가동</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/comp11.jpg" alt="PC8">
+                                </div>
+                                <p>고사양 작업과 게이밍까지 한번에!</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s3">
+            <div class="center">
+                <div class="title">
+                    <h1>MD 강력추천</h1>
+                </div>
+                <div class="container">
+                    <div class="swiper gallerySlide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/ai_205.jpg " alt="AI">
+                                    </div>
+                                    <p>고도 연산작업 AI를 활용한 작업을 더욱 효율적으로</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/comp1.png " alt="컴퓨터1">
+                                    </div>
+                                    <p>생동감 넘치는 3D게임 그래픽을 마음껏 즐겨 보세요!</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/comp23.png " alt="컴퓨터2">
+                                    </div>
+                                    <p>고용량 고화질 영상 빠르고 효율적으로 작업하세요.</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/comp24.png " alt="컴퓨터3">
+                                    </div>
+                                    <p>매력적이고 현실적인 결과물을 얻기 위한 작업을<br> 효과적으로 수행합니다.</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/comp25.png " alt="컴퓨터4">
+                                    </div>
+                                    <p>빠른 성능 정밀한 화면 표현으로 더욱 창의적인 <br>디자인 표현이 가능합니다.</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/comp32.png " alt="컴퓨터32">
+                                    </div>
+                                    <p>지금까지 본적 없었던 역대급 가성비</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/comp33.png " alt="컴퓨터33">
+                                    </div>
+                                    <p>최상의 성능과 깔끔한 디자인, 화려한 LED로 <br>모두의 눈길을 사로잡다. </p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo">
+                                        <img src="img/comp34.png " alt="컴퓨터34">
+                                    </div>
+                                    <p>내마음대로 조립하는 최저가격 최고성능 가성비PC</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s4">
+            <div class="center">
+                <div class="title">
+                    <h1>쿨젠 컴퓨터 월간 견적</h1>
+                </div>
+                <div class="container">
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/comp28.png" alt="컴29">
+                            </div>
+                            <p>쿨젠[8월추천]M071<br>994,000원</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/comp31.jpg" alt="컴31">
+                            </div>
+                            <p>쿨젠[8월추천]M072<br>1,250,000원</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/comp30.jpg" alt="컴31">
+                            </div>
+                            <p>쿨젠[8월추천]M074<br>2,499,000원</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/comp29.gif" alt="컴29">
+                            </div>
+                            <p>쿨젠[8월추천]M075<br>1,990,000원</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s5">
+            <div class="center">
+                <div class="title">
+                    <h1>추천 모니터</h1>
+                    <a href="#">더보기<i><img src="img/plus.svg" alt="더하기"></i></a>
+                </div>
+                <div class="container">
+                    <div class="left-con">
+                        <a href="#">
+                            <div class="photo main">
+                                <img src="img/moniA.png" alt="모니터홍보">
+                            </div>
+                            <p>현실보다 더 현실같은 생동감 넘치는 화면</p>
+                        </a>
+                    </div>
+                    <div class="right-con">
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/moni2.png" alt="모니터2">
+                                </div>
+                                <p>[LG] 27인치 게이밍 144Hz[무결점]</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/moni3.png" alt="모니터3">
+                                </div>
+                                <p>[삼성] 32인치 커브드 165Hz[무결점]</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/moni4.png" alt="모니터4">
+                                </div>
+                                <p>[LG] 27인치 커브드 게이밍 QHD 144Hz[무결점]</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/moni5.png" alt="모니터5">
+                                </div>
+                                <p>[LG] 27인치 커브드 게이밍 165Hz[무결점]</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s6">
+            <div class="center">
+                <div class="title">
+                    <h1>지금뜨는 카테고리</h1>
+                </div>
+                <div class="container">
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/cate1.jpg" alt="배틀그라운드 PC">
+                            </div>
+                            <p>배틀크라운드 PC</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/cate2.jpg" alt="고사양 미니 PC">
+                            </div>
+                            <p>고사양 미니 PC</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/cate3.jpg" alt="스팀게임 PC">
+                            </div>
+                            <p>스팀게임 PC</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/cate4.jpg" alt="프로게이머 PC">
+                            </div>
+                            <p>프로게이머 PC</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s7">
+            <div class="center">
+                <div class="container">
+                    <div class="logo-icon">
+                        <img src="img/logo.jpg" alt="로고">
+                    </div>
+                    <p>실시간으로 업데이트 되는 쿨젠의 최신소식</p>
+                    <a href="#">팔로우하기 <i><img src="img/plus.svg" alt="더하기"></i></a>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <div class="center">
+                    <div class="info">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">제휴문의</a></li>
+                        </ul>
+                    </div>
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#">
+                                    <img src="img/icon_shopping.svg" alt="네이버쇼핑">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="img/blog.svg" alt="블로그">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="img/instagram.svg" alt="인스타그램">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="img/youtube.svg" alt="유튜브">
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="center">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.jpg" alt="로고"></a>
+                    </div>
+                    <address>
+                        서울시 용산구 원효로 182 창일빌딩 5층(원효로 2가 44-7)<br>TEL.1544-6124<br>FAX.02-706-6124<br>COPYRIGHTⓒSince 2003
+                        Coolzen Corporation. All rights reserved
+                    </address>
+                    <div class="family">
+                        <div class="sub">
+                            <a href="#">공정거래위원회</a>
+                            <a href="#">인텔골드프로바이더</a>
+                            <a href="#">Microsoft</a>
+                            <a href="#">LGU+</a>
+                            <a href="#">KGMobilians</a>
+                            <a href="#">현금영수증 발행 가맹점</a>
+                            <a href="#">분쟁 조정위원회</a>
+                            <a href="#">KG모빌리언스</a>
+                            <a href="#">SSL보안서버구축</a>
+                        </div>
+                        <a href="#">
+                            <p>패밀리 사이트</p>
+                            <span><img src="img/down_arrow_icon.svg" alt="down"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="sitemap">
+            <div class="sitemap-in">
+                <a href="#" class="close-btn"><img src="img/close.svg" alt="close"></a>
+                <div class="sitebox">
+                    <div class="memberbox">
+                        <ul>
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#">SIGNUP</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu1">
+                        <ul>
+                            <li><a href="#">컴퓨터</a></li>
+                            <li><a href="#">부품</a></li>
+                            <li><a href="#">행사</a></li>
+                        </ul>
+                    </div><!-- menu1 -->
+                    <div class="menu2">
+                        <ul>
+                            <li>
+                                <a href="#"><p>용도별PC</p>
+                                    <i>
+                                        <span class="barX"></span>
+                                        <span class="barY"></span>
+                                    </i>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="#">3D게임용</a></li>
+                                    <li><a href="#">인터넷 사무용</a></li>
+                                    <li><a href="#">포토샵 일러스트</a></li>
+                                    <li><a href="#">동영상 편집</a></li>
+                                    <li><a href="#">3D 렌더링</a></li>
+                                    <li><a href="#">AI / 워크스테이션</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><p>게임별PC</p>
+                                    <i>
+                                        <span class="barX"></span>
+                                        <span class="barY"></span>
+                                    </i>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="#">배틀그라운드</a></li>
+                                    <li><a href="#">발로란트</a></li>
+                                    <li><a href="#">리그오브레전드</a></li>
+                                    <li><a href="#">로스트아크</a></li>
+                                    <li><a href="#">오버워치</a></li>
+                                    <li><a href="#">퍼스트 디센던트</a></li>
+                                    <li><a href="#">PC방 고사양</a></li>
+                                    <li><a href="#">스팀 인기게임</a></li>
+                                    <li><a href="#">엘든링</a></li>
+                                    <li><a href="#">검은 신화: 오공</a></li>
+                                    <li><a href="#">케주얼 온라인 게임</a></li>
+                                    <li><a href="#">어린이 인기 게임</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><p>프리미엄PC</p>
+                                    <i>
+                                        <span class="barX"></span>
+                                        <span class="barY"></span>
+                                    </i>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="#">프리미엄</a></li>
+                                    <li><a href="#">프로게이머</a></li>
+                                    <li><a href="#">익스트림PC</a></li>
+                                    <li><a href="#">그래픽전문가용</a></li>
+                                    <li><a href="#">고사양 미니 PC</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">월간 추천 견적</a></li>
+                            <li>
+                                <a href="#"><p>온라인견적</p>
+                                    <i>
+                                        <span class="barX"></span>
+                                        <span class="barY"></span>
+                                    </i>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="#">DIY 인텔</a></li>
+                                    <li><a href="#">DIY AMD</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- menu2 -->
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#"><img src="/img/facebook.svg" alt="facebook"></a></li>
+                            <li><a href="#"><img src="/img/instagram.svg" alt="facebook"></a></li>
+                            <li><a href="#"><img src="/img/youtube.svg" alt="facebook"></a></li>
+                            <li><a href="#"><img src="/img/comma.svg" alt="facebook"></a></li>
+                            <li><a href="#"><img src="/img/X.svg" alt="facebook"></a></li>
+                        </ul>
+                    </div>
+
+                </div><!-- sitebox-->
+            </div><!-- sitemap-in -->
+            <div class="sitemap-bg"></div>
+        </div><!-- sitemap -->
+        <div class="search-area">
+            <div class="search-bg"></div>
+            <div class="search-in">
+                <div class="input-area">
+                    <input type="search" name="search" placeholder="검색어를 입력해주세요.">
+                    <div class="search-btn">
+                        <button type="button">
+                            <img src="img/search.svg" alt="검색">
+                        </button>
+                    </div>
+                </div><!-- input-area -->
+            </div><!-- search-in -->
+        </div><!-- search-area -->
+    </div><!-- wrap -->
+    <div class="top"><a href="#">TOP</a></div>
+</body>
+
+</html>
